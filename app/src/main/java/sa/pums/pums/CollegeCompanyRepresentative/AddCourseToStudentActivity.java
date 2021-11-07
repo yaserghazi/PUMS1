@@ -19,20 +19,20 @@ import com.google.firebase.database.ValueEventListener;
 import java.util.ArrayList;
 import java.util.List;
 
-import sa.pums.pums.Adapters.VerfiyStudentAdapter;
-import sa.pums.pums.Model.UserModel;
+import sa.pums.pums.Adapters.CourseAdapter;
+import sa.pums.pums.Model.CourseModel;
 import sa.pums.pums.R;
 
-public class VerifyStudentActivity extends AppCompatActivity {
-    List<UserModel> resultsList;
-    VerfiyStudentAdapter nAdapter;
+public class AddCourseToStudentActivity extends AppCompatActivity {
+    List<CourseModel> resultsList;
+    CourseAdapter nAdapter;
     RecyclerView recyclerView;
     ProgressBar progress_bar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_accept_user);
+        setContentView(R.layout.activity_course);
 
 
         findViewById(R.id.arrow).setOnClickListener(new View.OnClickListener() {
@@ -43,7 +43,7 @@ public class VerifyStudentActivity extends AppCompatActivity {
         });
 
         DatabaseReference databaseReference = FirebaseDatabase.getInstance("https://pums-9538d-default-rtdb.firebaseio.com/")
-                .getReference().child("Users");
+                .getReference().child("Course");
 
 
         recyclerView = findViewById(R.id.recycler);
@@ -53,7 +53,7 @@ public class VerifyStudentActivity extends AppCompatActivity {
         recyclerView.setItemAnimator(new DefaultItemAnimator());
         recyclerView.setHasFixedSize(true);
 
-        nAdapter = new VerfiyStudentAdapter(this, resultsList);
+        nAdapter = new CourseAdapter(this, resultsList);
         recyclerView.setAdapter(nAdapter);
 
         progress_bar.setVisibility(View.VISIBLE);
@@ -65,24 +65,20 @@ public class VerifyStudentActivity extends AppCompatActivity {
                 progress_bar.setVisibility(View.GONE);
 
                 for (DataSnapshot snapshot : dataSnapshot.getChildren()) {
-                    UserModel user = snapshot.getValue(UserModel.class);
-
-                    if (user.getType() == 3) {//للتأكد من ان المستخدمStudent
-                        resultsList.add(user);
-                    }
-
+                    CourseModel model = snapshot.getValue(CourseModel.class);
+                    resultsList.add(model);
                     nAdapter.notifyDataSetChanged();
                 }
                 if (resultsList.size() == 0) {
 
-                    Toast.makeText(VerifyStudentActivity.this, "No data", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(AddCourseToStudentActivity.this, "No data", Toast.LENGTH_SHORT).show();
                     finish();
                 }
             }
 
             @Override
             public void onCancelled(DatabaseError databaseError) {
-                Toast.makeText(VerifyStudentActivity.this, "No data", Toast.LENGTH_SHORT).show();
+                Toast.makeText(AddCourseToStudentActivity.this, "No data", Toast.LENGTH_SHORT).show();
             }
         });
     }
