@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">PUMS</string>
+    <string name="college_company_representative">College/company representative</string>
+    <string name="company_representative">Company representative</string>
+    <string name="student_account">Student account</string>
+    <string name="add_company">Add Company</string>
+    <string name="delete_company">Delete Company</string>
+    <string name="delete_collage_company_representative">Delete Collage/Company representative</string>
+    <string name="add_collage_company_representative">Add Collage/Company representative</string>
+    <string name="add_new_course">Add new Course</string>
+    <string name="delete_course">Delete Course</string>
+    <string name="add_course_statistic">Add/Post Course Statistic</string>
+    <string name="update_course_statistic">Update Course Statistic</string>
+    <string name="post_course_statistic">Post Course Statistic</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="verify_student">Verify student</string>
+    <string name="post_course_update">Post course update</string>
+    <string name="post_announcement">post announcement</string>
+    <string name="update_company_information">Update company information</string>
+    <string name="view_courses">View courses</string>
+    <string name="view_companies">View Companies</string>
+    <string name="rate">Rate</string>
+</resources>

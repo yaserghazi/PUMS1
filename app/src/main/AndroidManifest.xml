@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="sa.pums.pums">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.PUMS">
+        <activity
+            android:name=".WelcomeActivity"
+            android:exported="true"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Admin.AddCompanyActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Admin.AdminHomeActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".LoginActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".RegisterActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Admin.AcceptAndVerifyActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Admin.DeleteCompanyActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".CollegeCompanyRepresentative.AddCourseActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".CollegeCompanyRepresentative.CollegeCompanyRepresentativeHomeActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".CollegeCompanyRepresentative.DeleteCourseActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".CollegeCompanyRepresentative.AddCourseStatisticsActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".CollegeCompanyRepresentative.VerifyStudentActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".CollegeCompanyRepresentative.CoursesStatisticActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".CollegeCompanyRepresentative.UpdateCourseStatisticsActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".CompanyRepresentaive.CompanyHomeActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".CompanyRepresentaive.PostCourseActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".CompanyRepresentaive.PostAnnouncementActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".CompanyRepresentaive.AnnouncementsActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".CompanyRepresentaive.UpdateCompanyInformationActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".Student.StudentHomeActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".Student.CompanyActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".Student.AllCoursesActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".Student.CourseDetialsActivity" />
+    </application>
+
+</manifest>

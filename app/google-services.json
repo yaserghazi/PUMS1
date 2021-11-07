@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "613934402599",
+    "project_id": "pums-9538d",
+    "storage_bucket": "pums-9538d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:613934402599:android:f6a8fd07da6edbec509202",
+        "android_client_info": {
+          "package_name": "sa.pums.pums"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "613934402599-4jritbsd7cjbnn4s9u7cl551h41a7goe.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBBowmpw4qisKmAAvg9KngJ-rzVQ7uyD7Y"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "613934402599-4jritbsd7cjbnn4s9u7cl551h41a7goe.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
