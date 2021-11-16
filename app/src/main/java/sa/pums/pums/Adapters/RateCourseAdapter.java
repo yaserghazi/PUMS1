@@ -58,7 +58,8 @@ public class RateCourseAdapter extends RecyclerView.Adapter<RecyclerView.ViewHol
                 child("CompanyTB").child(model.getCompany()).child("name").addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
-                holder1.company.setText("Company Name" + snapshot.getValue() + "");
+                holder1.company.setText("Company Name " + snapshot.getValue()==null?"":snapshot.getValue()+"");
+
             }
 
             @Override

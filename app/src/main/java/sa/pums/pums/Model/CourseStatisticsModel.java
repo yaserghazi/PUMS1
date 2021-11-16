@@ -10,6 +10,7 @@ public class CourseStatisticsModel {
     String Uid;
     String course_id;
     String course_name;
+    String company_id;
 
     String number_register;
     String start_date;
@@ -22,8 +23,10 @@ public class CourseStatisticsModel {
     public CourseStatisticsModel() {
     }
 
-    public CourseStatisticsModel(String uid, String course_id,String course_name,String number_register, String start_date, String end_date, String presenter, String success_rate, String failure_rate, String id_user) {
+    public CourseStatisticsModel(String company_id,String uid, String course_id,String course_name,String number_register, String start_date, String end_date, String presenter, String success_rate, String failure_rate, String id_user) {
         Uid = uid;
+        this.company_id = company_id;
+
         this.course_id = course_id;
         this.course_name = course_name;
         this.number_register = number_register;
@@ -36,6 +39,14 @@ public class CourseStatisticsModel {
         this.id_user = id_user;
         createdAt = new Date().getTime();
 
+    }
+
+    public String getCompany_id() {
+        return company_id;
+    }
+
+    public void setCompany_id(String company_id) {
+        this.company_id = company_id;
     }
 
     public String getCourse_name() {

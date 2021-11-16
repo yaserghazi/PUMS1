@@ -1,5 +1,7 @@
 package sa.pums.pums.CollegeCompanyRepresentative;
 
+import static sa.pums.pums.CollegeCompanyRepresentative.CollegeCompanyRepresentativeHomeActivity.Company_ID;
+
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ProgressBar;
@@ -67,6 +69,11 @@ public class CoursesStatisticActivity extends AppCompatActivity {
 
                 for (DataSnapshot snapshot : dataSnapshot.getChildren()) {
                     CourseStatisticsModel model = snapshot.getValue(CourseStatisticsModel.class);
+                    try {
+                        if (Company_ID.equals(model.getCompany_id()))
+                            resultsList.add(model);
+                    }catch (Exception e){}
+
                     resultsList.add(model);
                     nAdapter.notifyDataSetChanged();
                 }

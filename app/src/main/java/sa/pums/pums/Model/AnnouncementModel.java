@@ -8,6 +8,8 @@ import java.util.Locale;
 
 public class AnnouncementModel {
     String Uid;
+    String company_name;
+
     String announcement;
     String image;
     long createdAt;
@@ -15,12 +17,20 @@ public class AnnouncementModel {
     public AnnouncementModel() {
     }
 
-    public AnnouncementModel(String uid, String announcement, String image) {
+    public AnnouncementModel(String uid, String announcement, String image,String company_name) {
         Uid = uid;
         this.announcement = announcement;
         this.image = image;
         createdAt = new Date().getTime();
+        this.company_name = company_name;
+    }
 
+    public String getCompany_name() {
+        return company_name;
+    }
+
+    public void setCompany_name(String company_name) {
+        this.company_name = company_name;
     }
 
     public String getUid() {

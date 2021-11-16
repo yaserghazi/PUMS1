@@ -79,6 +79,8 @@
         <activity android:name=".Student.CourseDetialsActivity" />
         <activity android:name=".CollegeCompanyRepresentative.AddCourseToStudentActivity" />
         <activity android:name=".Student.RateCourseActivity" />
+        <activity android:name=".ForgetPasswordActivity" />
+        <activity android:name=".ChangeDataActivity" />
     </application>
 
 </manifest>

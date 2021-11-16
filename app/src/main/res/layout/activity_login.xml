@@ -151,6 +151,7 @@
                 android:textColor="@color/purple_700"
                 android:textSize="@dimen/_12sdp"
 
+                android:id="@+id/forget_password"
                 android:layout_marginStart="@dimen/_10sdp"
                 android:padding="@dimen/_5sdp"
                 android:text="Forget password !"/>

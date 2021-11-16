@@ -1,5 +1,7 @@
 package sa.pums.pums.CompanyRepresentaive;
 
+import static sa.pums.pums.CompanyRepresentaive.CompanyHomeActivity.Company_ID;
+
 import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Intent;
@@ -51,6 +53,7 @@ public class PostAnnouncementActivity extends AppCompatActivity {
     ProgressDialog dialogM;
     DatabaseReference database;
     ImageView preview;
+    String Company_Name;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -79,7 +82,18 @@ public class PostAnnouncementActivity extends AppCompatActivity {
                 pickImage();
             }
         });
+        FirebaseDatabase.getInstance("https://pums-9538d-default-rtdb.firebaseio.com/").getReference().
+                child("CompanyTB").child(Company_ID).child("name").addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                Company_Name= snapshot.getValue() + "";
+            }
 
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
         findViewById(R.id.buttonRegister).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -87,7 +101,7 @@ public class PostAnnouncementActivity extends AppCompatActivity {
                     dialogM.show();
                     String key = database.push().getKey();
 
-                    AnnouncementModel announcementModel=new  AnnouncementModel(key,about.getText().toString(), link);
+                    AnnouncementModel announcementModel=new  AnnouncementModel(key,about.getText().toString(), link,Company_Name);
                     database.child(key).setValue(announcementModel).addOnCompleteListener(new OnCompleteListener<Void>() {
                         @Override
                         public void onComplete(@NonNull Task<Void> task) {

@@ -39,7 +39,8 @@ public class AnnouncementAdapter extends RecyclerView.Adapter<RecyclerView.ViewH
         final AnnouncementModel model = list.get(position);
         holder1.name.setText(model.getAnnouncement() + "");
         holder1.date.setText(model.getFormattedTime() + "");
-
+        holder1.company.setText("Company Name " + model.getCompany_name() + "");
+      //  holder1.company.setText("Company Name " + model.getCompany_name()==null?"":model.getCompany_name()+"");
 
         try {
             if (!model.getImage().equals(""))
@@ -64,11 +65,12 @@ public class AnnouncementAdapter extends RecyclerView.Adapter<RecyclerView.ViewH
 
 
     public class Holder extends RecyclerView.ViewHolder {
-        TextView name,date;
+        TextView name,date,company;
         ImageView imageView;
 
         public Holder(View itemView) {
             super(itemView);
+            company= (TextView) itemView.findViewById(R.id.company);
             name = (TextView) itemView.findViewById(R.id.name);
             date = (TextView) itemView.findViewById(R.id.date);
             imageView = (ImageView) itemView.findViewById(R.id.image);

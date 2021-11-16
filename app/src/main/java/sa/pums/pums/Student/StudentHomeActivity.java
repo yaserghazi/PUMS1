@@ -20,7 +20,9 @@ import androidx.drawerlayout.widget.DrawerLayout;
 
 import com.google.android.material.navigation.NavigationView;
 
+import sa.pums.pums.ChangeDataActivity;
 import sa.pums.pums.CompanyRepresentaive.AnnouncementsActivity;
+import sa.pums.pums.CompanyRepresentaive.CompanyHomeActivity;
 import sa.pums.pums.CompanyRepresentaive.PostAnnouncementActivity;
 import sa.pums.pums.CompanyRepresentaive.PostCourseActivity;
 import sa.pums.pums.CompanyRepresentaive.UpdateCompanyInformationActivity;
@@ -33,10 +35,10 @@ public class StudentHomeActivity extends AppCompatActivity implements Navigation
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        setContentView(R.layout.activity_student_home);
         SharedPreferences sharedPreferences = getSharedPreferences("login", MODE_PRIVATE);
         sharedPreferences.getString("Uid", "");
-        setContentView(R.layout.activity_student_home);
-
         TextView name = (TextView) findViewById(R.id.name);
         name.setText(sharedPreferences.getString("Name", ""));
         TextView email = (TextView) findViewById(R.id.email);
@@ -64,11 +66,15 @@ public class StudentHomeActivity extends AppCompatActivity implements Navigation
             public void onClick(View view) {
                 Intent intent = new Intent(StudentHomeActivity.this, RateCourseActivity.class);
                 startActivity(intent);
-
-
             }
         });
-
+        findViewById(R.id.announcements_btn).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(StudentHomeActivity.this, AnnouncementsActivity.class);
+                startActivity(intent);
+            }
+        });
 
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -106,23 +112,15 @@ public class StudentHomeActivity extends AppCompatActivity implements Navigation
 
         switch (id) {
             case R.id.home:
-                // HomeActivityNew.this.finish();
-
                 break;
-            case R.id.setting:
-                //    Intent intent = new Intent(MapsActivity.this, Change_data.class);
-                //    startActivity(intent);
-
-                break;
-
-
             case R.id.help:
+
 
 
                 break;
             case R.id.edit_account:
-
-
+                Intent intent = new Intent(StudentHomeActivity.this, ChangeDataActivity.class);
+                startActivity(intent);
                 break;
             case R.id.logout:
                 AlertDialog.Builder builder2 = new AlertDialog.Builder(StudentHomeActivity.this);

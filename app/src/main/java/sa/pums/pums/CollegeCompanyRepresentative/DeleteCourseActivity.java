@@ -1,5 +1,7 @@
 package sa.pums.pums.CollegeCompanyRepresentative;
 
+import static sa.pums.pums.CollegeCompanyRepresentative.CollegeCompanyRepresentativeHomeActivity.Company_ID;
+
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ProgressBar;
@@ -67,6 +69,8 @@ public class DeleteCourseActivity extends AppCompatActivity {
 
                 for (DataSnapshot snapshot : dataSnapshot.getChildren()) {
                     CourseModel model = snapshot.getValue(CourseModel.class);
+                    if (Company_ID.equals(model.getCompany()))
+                        resultsList.add(model);
                     resultsList.add(model);
                     nAdapter.notifyDataSetChanged();
                 }

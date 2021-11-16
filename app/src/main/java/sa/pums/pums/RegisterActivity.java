@@ -165,9 +165,10 @@ public class RegisterActivity extends AppCompatActivity {
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if (task.isSuccessful()) {
                     mDialog.dismiss();
+
                     UserModel user = new UserModel(task.getResult().getUser().getUid(), fname.getText().toString() + "",
                             lname.getText().toString() + "", id_num.getText().toString() + "",
-                            Email + "", true, false, Type, company_id);
+                            Email + "", Type==3?true:false, false, Type, company_id);
                     mdatabase.child(task.getResult().getUser().getUid()).setValue(user);
                     FirebaseAuth.getInstance().signOut();
                     Toast.makeText(RegisterActivity.this, "Successfully", Toast.LENGTH_SHORT).show();

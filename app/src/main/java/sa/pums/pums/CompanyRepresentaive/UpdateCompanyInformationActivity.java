@@ -59,12 +59,15 @@ public class UpdateCompanyInformationActivity extends AppCompatActivity {
         databaseReference.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
-                model = dataSnapshot.getValue(CompanyModel.class);
-                name.setText(model.getName() + "");
-                company_id.setText(model.getId() + "");
-                description.setText(model.getDescription()==null ? "" : model.getDescription());
+                try {
+                    model = dataSnapshot.getValue(CompanyModel.class);
+                    name.setText(model.getName() + "");
+                    company_id.setText(model.getId() + "");
+                    description.setText(model.getDescription()==null ? "" : model.getDescription());
 
-            }
+
+                }catch (Exception e){}
+               }
 
             @Override
             public void onCancelled(DatabaseError databaseError) {

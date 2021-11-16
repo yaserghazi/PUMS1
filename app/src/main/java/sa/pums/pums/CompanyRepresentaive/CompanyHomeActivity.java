@@ -20,6 +20,7 @@ import androidx.drawerlayout.widget.DrawerLayout;
 
 import com.google.android.material.navigation.NavigationView;
 
+import sa.pums.pums.ChangeDataActivity;
 import sa.pums.pums.CollegeCompanyRepresentative.CollegeCompanyRepresentativeHomeActivity;
 import sa.pums.pums.LoginActivity;
 import sa.pums.pums.R;
@@ -112,11 +113,6 @@ public class CompanyHomeActivity extends AppCompatActivity implements Navigation
                 // HomeActivityNew.this.finish();
 
                 break;
-            case R.id.setting:
-                //    Intent intent = new Intent(MapsActivity.this, Change_data.class);
-                //    startActivity(intent);
-
-                break;
 
 
             case R.id.help:
@@ -125,6 +121,8 @@ public class CompanyHomeActivity extends AppCompatActivity implements Navigation
                 break;
             case R.id.edit_account:
 
+                Intent intent = new Intent(CompanyHomeActivity.this, ChangeDataActivity.class);
+                startActivity(intent);
 
                 break;
             case R.id.logout:

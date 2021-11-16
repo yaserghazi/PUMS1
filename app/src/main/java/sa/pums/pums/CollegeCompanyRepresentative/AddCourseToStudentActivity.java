@@ -1,5 +1,7 @@
 package sa.pums.pums.CollegeCompanyRepresentative;
 
+import static sa.pums.pums.CollegeCompanyRepresentative.CollegeCompanyRepresentativeHomeActivity.Company_ID;
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -73,7 +75,8 @@ public class AddCourseToStudentActivity extends AppCompatActivity {
 
                 for (DataSnapshot snapshot : dataSnapshot.getChildren()) {
                     CourseModel model = snapshot.getValue(CourseModel.class);
-                    resultsList.add(model);
+                    if (Company_ID.equals(model.getCompany()))
+                        resultsList.add(model);
                     nAdapter.notifyDataSetChanged();
                 }
                 if (resultsList.size() == 0) {

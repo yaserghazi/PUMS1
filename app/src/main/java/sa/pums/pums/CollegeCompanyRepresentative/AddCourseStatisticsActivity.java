@@ -1,5 +1,7 @@
 package sa.pums.pums.CollegeCompanyRepresentative;
 
+import static sa.pums.pums.CollegeCompanyRepresentative.CollegeCompanyRepresentativeHomeActivity.Company_ID;
+
 import android.app.DatePickerDialog;
 import android.app.ProgressDialog;
 import android.graphics.Color;
@@ -77,7 +79,7 @@ public class AddCourseStatisticsActivity extends AppCompatActivity {
                     dialogM.show();
                     String key = database.push().getKey();
 
-                    CourseStatisticsModel model = new CourseStatisticsModel(key,
+                    CourseStatisticsModel model = new CourseStatisticsModel(Company_ID,key,
                             Course_id,course_name,number_register.getText().toString(), Start_Date.getText().toString(), End_Date.getText().toString(),
                             Presenter.getText().toString(), Success_Rate.getText().toString(), Failure_Rate.getText().toString(), CollegeCompanyRepresentativeHomeActivity.Uid);
 

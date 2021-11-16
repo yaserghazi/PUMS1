@@ -21,4 +21,5 @@
     <string name="view_courses">View courses</string>
     <string name="view_companies">View Companies</string>
     <string name="rate">Rate</string>
+    <string name="management_user">Management User</string>
 </resources>
