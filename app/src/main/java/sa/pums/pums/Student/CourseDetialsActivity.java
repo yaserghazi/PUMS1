@@ -65,7 +65,7 @@ public class CourseDetialsActivity extends AppCompatActivity {
                         child("CompanyTB").child(modelC.getCompany()).child("name").addValueEventListener(new ValueEventListener() {
                     @Override
                     public void onDataChange(@NonNull DataSnapshot snapshot) {
-                        the_company.setText("Course Name"+snapshot.getValue()+"");
+                        the_company.setText("Company Name"+snapshot.getValue()+"");
                     }
 
                     @Override

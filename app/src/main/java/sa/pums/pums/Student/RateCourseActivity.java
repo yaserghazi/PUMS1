@@ -1,10 +1,9 @@
-package sa.pums.pums.CollegeCompanyRepresentative;
+package sa.pums.pums.Student;
 
-import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ProgressBar;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -21,27 +20,23 @@ import com.google.firebase.database.ValueEventListener;
 import java.util.ArrayList;
 import java.util.List;
 
-import sa.pums.pums.Adapters.AddCourseAdapter;
+import sa.pums.pums.Adapters.RateCourseAdapter;
 import sa.pums.pums.Model.CourseModel;
 import sa.pums.pums.R;
 
-public class AddCourseToStudentActivity extends AppCompatActivity {
+public class RateCourseActivity extends AppCompatActivity {
     List<CourseModel> resultsList;
-    AddCourseAdapter nAdapter;
+    RateCourseAdapter nAdapter;
     RecyclerView recyclerView;
     ProgressBar progress_bar;
-    TextView student_name;
-    public static String ID, nameStudent;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_add_course_student);
-        Intent intent = getIntent();
-        ID = intent.getStringExtra("ID");
-        nameStudent = intent.getStringExtra("name");
-        student_name = findViewById(R.id.student_name);
-        student_name.setText(nameStudent + "");
+        setContentView(R.layout.activity_rate_course);
+        SharedPreferences sharedPreferences = getSharedPreferences("login", MODE_PRIVATE);
+
         findViewById(R.id.arrow).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -50,7 +45,7 @@ public class AddCourseToStudentActivity extends AppCompatActivity {
         });
 
         DatabaseReference databaseReference = FirebaseDatabase.getInstance("https://pums-9538d-default-rtdb.firebaseio.com/")
-                .getReference().child("Course");
+                .getReference().child("CourseRegister").child(sharedPreferences.getString("Uid", ""));
 
 
         recyclerView = findViewById(R.id.recycler);
@@ -60,7 +55,7 @@ public class AddCourseToStudentActivity extends AppCompatActivity {
         recyclerView.setItemAnimator(new DefaultItemAnimator());
         recyclerView.setHasFixedSize(true);
 
-        nAdapter = new AddCourseAdapter(this, resultsList);
+        nAdapter = new RateCourseAdapter(this, resultsList);
         recyclerView.setAdapter(nAdapter);
 
         progress_bar.setVisibility(View.VISIBLE);
@@ -78,14 +73,14 @@ public class AddCourseToStudentActivity extends AppCompatActivity {
                 }
                 if (resultsList.size() == 0) {
 
-                    Toast.makeText(AddCourseToStudentActivity.this, "No data", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(RateCourseActivity.this, "No data", Toast.LENGTH_SHORT).show();
                     finish();
                 }
             }
 
             @Override
             public void onCancelled(DatabaseError databaseError) {
-                Toast.makeText(AddCourseToStudentActivity.this, "No data", Toast.LENGTH_SHORT).show();
+                Toast.makeText(RateCourseActivity.this, "No data", Toast.LENGTH_SHORT).show();
             }
         });
     }

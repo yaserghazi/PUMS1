@@ -77,6 +77,8 @@
         <activity android:name=".Student.AllCoursesActivity"
             android:screenOrientation="portrait"/>
         <activity android:name=".Student.CourseDetialsActivity" />
+        <activity android:name=".CollegeCompanyRepresentative.AddCourseToStudentActivity" />
+        <activity android:name=".Student.RateCourseActivity" />
     </application>
 
 </manifest>

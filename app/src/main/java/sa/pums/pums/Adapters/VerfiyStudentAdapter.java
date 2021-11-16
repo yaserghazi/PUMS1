@@ -1,6 +1,7 @@
 package sa.pums.pums.Adapters;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -10,6 +11,8 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.List;
 
+import sa.pums.pums.CollegeCompanyRepresentative.AddCourseToStudentActivity;
+import sa.pums.pums.CollegeCompanyRepresentative.UpdateCourseStatisticsActivity;
 import sa.pums.pums.Model.UserModel;
 import sa.pums.pums.R;
 
@@ -25,7 +28,7 @@ public class VerfiyStudentAdapter extends RecyclerView.Adapter<RecyclerView.View
 
     @Override
     public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        return new Holder(LayoutInflater.from(parent.getContext()).inflate(R.layout.card_user, parent, false));
+        return new Holder(LayoutInflater.from(parent.getContext()).inflate(R.layout.card_user_add, parent, false));
     }
 
     @Override
@@ -40,7 +43,10 @@ public class VerfiyStudentAdapter extends RecyclerView.Adapter<RecyclerView.View
         holder1.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                Intent intent = new Intent(context, AddCourseToStudentActivity.class);
+                intent.putExtra("ID", user.getId());
+                intent.putExtra("name",user.getFirst_name()+" "+user.getLast_name());
+                context.startActivity(intent);
             }
         });
 

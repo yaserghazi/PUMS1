@@ -62,6 +62,9 @@ public class StudentHomeActivity extends AppCompatActivity implements Navigation
         findViewById(R.id.rate_btn).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                Intent intent = new Intent(StudentHomeActivity.this, RateCourseActivity.class);
+                startActivity(intent);
+
 
             }
         });

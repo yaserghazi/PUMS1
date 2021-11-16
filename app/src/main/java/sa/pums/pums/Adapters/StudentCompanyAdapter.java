@@ -60,8 +60,6 @@ public class StudentCompanyAdapter extends RecyclerView.Adapter<RecyclerView.Vie
 
     public class Holder extends RecyclerView.ViewHolder {
         TextView name;
-        DatabaseReference mdatabase;
-        ProgressDialog dialog1;
 
         public Holder(View itemView) {
             super(itemView);

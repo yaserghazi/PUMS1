@@ -21,7 +21,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginStart="@dimen/_5sdp"
-            android:layout_marginEnd="@dimen/_70sdp"
+            android:layout_marginEnd="@dimen/_5sdp"
             android:gravity="center"
             android:orientation="vertical">
 
@@ -68,37 +68,6 @@
 
     </LinearLayout>
 
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_centerVertical="true"
-        android:orientation="vertical">
-
-        <TextView
-            android:id="@+id/accept"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-
-            android:layout_marginEnd="@dimen/_10sdp"
-            android:background="@drawable/rounded_accept"
-            android:padding="@dimen/_5sdp"
-            android:text="Activation"
-            android:textColor="@color/white"
-            android:textSize="@dimen/_12sdp" />
-
-        <TextView
-            android:id="@+id/delete"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/_5sdp"
-            android:layout_marginEnd="@dimen/_15sdp"
-            android:background="@drawable/rounded_delete"
-            android:padding="@dimen/_5sdp"
-            android:text="block"
-            android:textColor="@color/white"
-            android:textSize="@dimen/_12sdp" />
-    </LinearLayout>
 
     <ImageView
         android:layout_width="match_parent"
