@@ -11,7 +11,8 @@ public class CourseModel {
     String id;
     String name;
     String place;
-    String date_time;
+    String date;
+    String time;
     String Counselor;
     String language;
     String company;
@@ -25,13 +26,15 @@ public class CourseModel {
     public CourseModel() { }
 
     public CourseModel(String id_user,String uid, String id, String name, String place,
-                       String date_time, String counselor, String language,String company,String price,int rate) {
+                       String date,String time, String counselor, String language,String company,String price,int rate) {
         this.id_user = id_user;
         Uid = uid;
         this.id = id;
         this.name = name;
         this.place = place;
-        this.date_time = date_time;
+        this.date = date;
+        this.time = time;
+
         Counselor = counselor;
         this.language = language;
         this.company=company;
@@ -96,12 +99,21 @@ public class CourseModel {
         this.place = place;
     }
 
-    public String getDate_time() {
-        return date_time;
+
+    public String getDate() {
+        return date;
     }
 
-    public void setDate_time(String date_time) {
-        this.date_time = date_time;
+    public void setDate(String date) {
+        this.date = date;
+    }
+
+    public String getTime() {
+        return time;
+    }
+
+    public void setTime(String time) {
+        this.time = time;
     }
 
     public String getCounselor() {

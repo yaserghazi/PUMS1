@@ -72,9 +72,10 @@ public class CoursesStatisticActivity extends AppCompatActivity {
                     try {
                         if (Company_ID.equals(model.getCompany_id()))
                             resultsList.add(model);
-                    }catch (Exception e){}
+                    } catch (Exception e) {
+                    }
 
-                    resultsList.add(model);
+
                     nAdapter.notifyDataSetChanged();
                 }
                 if (resultsList.size() == 0) {

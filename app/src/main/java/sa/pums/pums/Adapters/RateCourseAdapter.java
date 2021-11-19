@@ -52,7 +52,7 @@ public class RateCourseAdapter extends RecyclerView.Adapter<RecyclerView.ViewHol
 
         final CourseModel model = list.get(position);
         holder1.name.setText(model.getName() + "");
-        holder1.date.setText(model.getDate_time() + "");
+        holder1.date.setText(model.getDate() + " " + model.getTime());
 
         FirebaseDatabase.getInstance("https://pums-9538d-default-rtdb.firebaseio.com/").getReference().
                 child("CompanyTB").child(model.getCompany()).child("name").addValueEventListener(new ValueEventListener() {

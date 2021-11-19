@@ -22,10 +22,10 @@ import com.google.android.material.navigation.NavigationView;
 
 import sa.pums.pums.ChangeDataActivity;
 import sa.pums.pums.CompanyRepresentaive.AnnouncementsActivity;
-import sa.pums.pums.CompanyRepresentaive.CompanyHomeActivity;
+import sa.pums.pums.HelpActivity;
 import sa.pums.pums.LoginActivity;
-import sa.pums.pums.MainActivity;
 import sa.pums.pums.R;
+import sa.pums.pums.Student.StudentHomeActivity;
 
 public class AdminHomeActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
     DrawerLayout drawer;
@@ -116,7 +116,8 @@ public class AdminHomeActivity extends AppCompatActivity implements NavigationVi
 
 
             case R.id.help:
-
+                Intent intenth = new Intent(AdminHomeActivity.this, HelpActivity.class);
+                startActivity(intenth);
 
                 break;
             case R.id.edit_account:

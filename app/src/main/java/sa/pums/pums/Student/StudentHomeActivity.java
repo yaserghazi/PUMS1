@@ -26,6 +26,7 @@ import sa.pums.pums.CompanyRepresentaive.CompanyHomeActivity;
 import sa.pums.pums.CompanyRepresentaive.PostAnnouncementActivity;
 import sa.pums.pums.CompanyRepresentaive.PostCourseActivity;
 import sa.pums.pums.CompanyRepresentaive.UpdateCompanyInformationActivity;
+import sa.pums.pums.HelpActivity;
 import sa.pums.pums.LoginActivity;
 import sa.pums.pums.R;
 
@@ -114,9 +115,8 @@ public class StudentHomeActivity extends AppCompatActivity implements Navigation
             case R.id.home:
                 break;
             case R.id.help:
-
-
-
+                Intent intenth = new Intent(StudentHomeActivity.this, HelpActivity.class);
+                startActivity(intenth);
                 break;
             case R.id.edit_account:
                 Intent intent = new Intent(StudentHomeActivity.this, ChangeDataActivity.class);

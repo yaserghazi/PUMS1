@@ -45,14 +45,14 @@ public class CourseStudentAdapter extends RecyclerView.Adapter<RecyclerView.View
 
         final CourseModel model = list.get(position);
         holder1.name.setText(model.getName() + "");
-        holder1.date.setText(model.getDate_time() + "");
+        holder1.date.setText(model.getDate() + " " + model.getTime());
         holder1.mdatabase.child(model.getUid())
                 .addValueEventListener(new ValueEventListener() {
                     @Override
                     public void onDataChange(@NonNull DataSnapshot snapshot) {
-                        Long total_rate= Long.valueOf(0);
+                        Long total_rate = Long.valueOf(0);
                         for (DataSnapshot dataSnapshot : snapshot.getChildren()) {
-                            total_rate+=(Long) dataSnapshot.getValue();
+                            total_rate += (Long) dataSnapshot.getValue();
                         }
                         try {
                             holder1.rb.setRating(total_rate);
@@ -97,8 +97,8 @@ public class CourseStudentAdapter extends RecyclerView.Adapter<RecyclerView.View
         public Holder(View itemView) {
             super(itemView);
             name = (TextView) itemView.findViewById(R.id.name);
-            date= (TextView) itemView.findViewById(R.id.date);
-            rb=(RatingBar) itemView.findViewById(R.id.rb);
+            date = (TextView) itemView.findViewById(R.id.date);
+            rb = (RatingBar) itemView.findViewById(R.id.rb);
             mdatabase = FirebaseDatabase.getInstance("https://pums-9538d-default-rtdb.firebaseio.com/").
                     getReference().child("CourseRate");
 

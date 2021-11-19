@@ -28,8 +28,10 @@ import sa.pums.pums.Admin.DeleteCompanyActivity;
 import sa.pums.pums.ChangeDataActivity;
 import sa.pums.pums.CompanyRepresentaive.AnnouncementsActivity;
 import sa.pums.pums.CompanyRepresentaive.CompanyHomeActivity;
+import sa.pums.pums.HelpActivity;
 import sa.pums.pums.LoginActivity;
 import sa.pums.pums.R;
+import sa.pums.pums.Student.StudentHomeActivity;
 
 public class CollegeCompanyRepresentativeHomeActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
     DrawerLayout drawer;
@@ -138,7 +140,8 @@ public class CollegeCompanyRepresentativeHomeActivity extends AppCompatActivity 
 
 
             case R.id.help:
-
+                Intent intenth = new Intent(CollegeCompanyRepresentativeHomeActivity.this, HelpActivity.class);
+                startActivity(intenth);
 
                 break;
             case R.id.edit_account:

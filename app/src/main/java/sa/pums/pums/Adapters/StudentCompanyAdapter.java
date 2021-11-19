@@ -44,6 +44,13 @@ public class StudentCompanyAdapter extends RecyclerView.Adapter<RecyclerView.Vie
 
         final CompanyModel model = list.get(position);
         holder1.name.setText(model.getName() + "");
+        try {
+            holder1.description.setText(model.getDescription() + "");
+        }catch (Exception e){
+
+        }
+
+
 
     }
 
@@ -59,12 +66,12 @@ public class StudentCompanyAdapter extends RecyclerView.Adapter<RecyclerView.Vie
 
 
     public class Holder extends RecyclerView.ViewHolder {
-        TextView name;
+        TextView name,description;
 
         public Holder(View itemView) {
             super(itemView);
             name = (TextView) itemView.findViewById(R.id.name);
-
+            description= (TextView) itemView.findViewById(R.id.description);
         }
     }
 }

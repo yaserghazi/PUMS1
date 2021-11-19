@@ -33,7 +33,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerInParent="true"
-                    android:text="@string/post_announcement"
+                    android:text="Add announcement"
                     android:textColor="@color/white"
                     android:textSize="@dimen/_14sdp" />
 
