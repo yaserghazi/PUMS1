@@ -64,7 +64,7 @@
             android:layout_height="@dimen/_35sdp"
             android:layout_gravity="center"
             android:gravity="center"
-            android:text="Post Announcement"
+            android:text="Announcement"
             android:textColor="@color/black"
             android:textSize="@dimen/_14sdp" />
 

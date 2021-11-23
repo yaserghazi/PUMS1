@@ -48,41 +48,40 @@
         <entry key="..\:/PUMS/app/src/main/res/layout/card_user_rate.xml" value="0.18" />
         <entry key="..\:/PUMS/app/src/main/res/layout/header.xml" value="0.125" />
         <entry key="..\:/PUMS/app/src/main/res/menu/drawer.xml" value="0.16302083333333334" />
-        <entry key="..\:/PUMS1/app/src/main/res/layout/activity_about.xml" value="0.22" />
-        <entry key="..\:/PUMS1/app/src/main/res/layout/activity_add_course.xml" value="0.25" />
-        <entry key="..\:/PUMS1/app/src/main/res/layout/activity_add_course_statistics.xml" value="0.2" />
-        <entry key="..\:/PUMS1/app/src/main/res/layout/activity_company_home.xml" value="0.25" />
-        <entry key="..\:/PUMS1/app/src/main/res/layout/activity_company_student.xml" value="0.25" />
-        <entry key="..\:/PUMS1/app/src/main/res/layout/activity_course.xml" value="0.25" />
-        <entry key="..\:/PUMS1/app/src/main/res/layout/activity_course_detials.xml" value="0.25" />
-        <entry key="..\:/PUMS1/app/src/main/res/layout/activity_course_student.xml" value="0.25" />
-        <entry key="..\:/PUMS1/app/src/main/res/layout/activity_courses_statistic.xml" value="0.25" />
-        <entry key="..\:/PUMS1/app/src/main/res/layout/activity_main.xml" value="0.20416666666666666" />
-        <entry key="..\:/PUMS1/app/src/main/res/layout/activity_post_announcement.xml" value="0.33" />
-        <entry key="..\:/PUMS1/app/src/main/res/layout/activity_post_course.xml" value="0.25" />
-        <entry key="..\:/PUMS1/app/src/main/res/layout/activity_student_home.xml" value="0.2" />
-        <entry key="..\:/PUMS1/app/src/main/res/layout/activity_update_company_information.xml" value="0.25" />
-        <entry key="..\:/PUMS1/app/src/main/res/layout/card_company2.xml" value="0.20416666666666666" />
-        <entry key="..\:/PUMS1/app/src/main/res/layout/card_course.xml" value="0.134375" />
-        <entry key="..\:/PUMS1/app/src/main/res/layout/card_course_add.xml" value="0.25" />
-        <entry key="..\:/PUMS1/app/src/main/res/layout/card_course_statistic.xml" value="0.33" />
-        <entry key="..\:/PUMS1/app/src/main/res/layout/card_course_student.xml" value="0.20416666666666666" />
-        <entry key="..\:/PUMS1/app/src/main/res/menu/drawer.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Yaser Jebril/Desktop/PUMS/app/src/main/res/layout/activity_about.xml" value="0.27291666666666664" />
+        <entry key="..\:/Users/Yaser Jebril/Desktop/PUMS/app/src/main/res/layout/activity_accept_user.xml" value="0.27291666666666664" />
+        <entry key="..\:/Users/Yaser Jebril/Desktop/PUMS/app/src/main/res/layout/activity_add_company.xml" value="0.27291666666666664" />
+        <entry key="..\:/Users/Yaser Jebril/Desktop/PUMS/app/src/main/res/layout/activity_add_course.xml" value="0.27291666666666664" />
         <entry key="..\:/Users/Yaser Jebril/Desktop/PUMS/app/src/main/res/layout/activity_add_course_student.xml" value="0.20572916666666666" />
         <entry key="..\:/Users/Yaser Jebril/Desktop/PUMS/app/src/main/res/layout/activity_admin_home.xml" value="0.2" />
+        <entry key="..\:/Users/Yaser Jebril/Desktop/PUMS/app/src/main/res/layout/activity_announcement.xml" value="0.27291666666666664" />
+        <entry key="..\:/Users/Yaser Jebril/Desktop/PUMS/app/src/main/res/layout/activity_college_company_represntative_home.xml" value="0.27291666666666664" />
+        <entry key="..\:/Users/Yaser Jebril/Desktop/PUMS/app/src/main/res/layout/activity_company.xml" value="0.27291666666666664" />
         <entry key="..\:/Users/Yaser Jebril/Desktop/PUMS/app/src/main/res/layout/activity_company_home.xml" value="0.2" />
+        <entry key="..\:/Users/Yaser Jebril/Desktop/PUMS/app/src/main/res/layout/activity_company_student.xml" value="0.27291666666666664" />
+        <entry key="..\:/Users/Yaser Jebril/Desktop/PUMS/app/src/main/res/layout/activity_course.xml" value="0.27291666666666664" />
+        <entry key="..\:/Users/Yaser Jebril/Desktop/PUMS/app/src/main/res/layout/activity_course_detials.xml" value="0.27291666666666664" />
+        <entry key="..\:/Users/Yaser Jebril/Desktop/PUMS/app/src/main/res/layout/activity_course_student.xml" value="0.27291666666666664" />
+        <entry key="..\:/Users/Yaser Jebril/Desktop/PUMS/app/src/main/res/layout/activity_courses_statistic.xml" value="0.27291666666666664" />
         <entry key="..\:/Users/Yaser Jebril/Desktop/PUMS/app/src/main/res/layout/activity_forget_password.xml" value="0.2" />
         <entry key="..\:/Users/Yaser Jebril/Desktop/PUMS/app/src/main/res/layout/activity_login.xml" value="0.2" />
+        <entry key="..\:/Users/Yaser Jebril/Desktop/PUMS/app/src/main/res/layout/activity_post_announcement.xml" value="0.27291666666666664" />
+        <entry key="..\:/Users/Yaser Jebril/Desktop/PUMS/app/src/main/res/layout/activity_post_course.xml" value="0.27291666666666664" />
+        <entry key="..\:/Users/Yaser Jebril/Desktop/PUMS/app/src/main/res/layout/activity_rate_course.xml" value="0.27291666666666664" />
         <entry key="..\:/Users/Yaser Jebril/Desktop/PUMS/app/src/main/res/layout/activity_register.xml" value="0.27291666666666664" />
         <entry key="..\:/Users/Yaser Jebril/Desktop/PUMS/app/src/main/res/layout/activity_student_home.xml" value="0.2" />
+        <entry key="..\:/Users/Yaser Jebril/Desktop/PUMS/app/src/main/res/layout/activity_update_company_information.xml" value="0.27291666666666664" />
         <entry key="..\:/Users/Yaser Jebril/Desktop/PUMS/app/src/main/res/layout/activity_user_change_data.xml" value="0.27291666666666664" />
         <entry key="..\:/Users/Yaser Jebril/Desktop/PUMS/app/src/main/res/layout/card_announcement.xml" value="0.2" />
+        <entry key="..\:/Users/Yaser Jebril/Desktop/PUMS/app/src/main/res/layout/card_company.xml" value="0.27291666666666664" />
+        <entry key="..\:/Users/Yaser Jebril/Desktop/PUMS/app/src/main/res/layout/card_company2.xml" value="0.27291666666666664" />
         <entry key="..\:/Users/Yaser Jebril/Desktop/PUMS/app/src/main/res/layout/card_course_add.xml" value="0.25" />
+        <entry key="..\:/Users/Yaser Jebril/Desktop/PUMS/app/src/main/res/layout/card_user_rate.xml" value="0.27291666666666664" />
         <entry key="..\:/Users/Yaser Jebril/Desktop/PUMS/app/src/main/res/menu/drawer.xml" value="0.27291666666666664" />
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">

@@ -65,7 +65,7 @@
             android:layout_gravity="center"
             android:gravity="center"
 
-            android:text="@string/rate"
+            android:text="View Courses"
             android:textColor="@color/black"
             android:textSize="@dimen/_14sdp" />
 

@@ -1,22 +1,12 @@
 package sa.pums.pums.Adapters;
 
-import android.app.ProgressDialog;
 import android.content.Context;
-import android.content.DialogInterface;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
-import android.widget.Toast;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AlertDialog;
 import androidx.recyclerview.widget.RecyclerView;
-
-import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.Task;
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
 
 import java.util.List;
 
@@ -46,12 +36,9 @@ public class StudentCompanyAdapter extends RecyclerView.Adapter<RecyclerView.Vie
         holder1.name.setText(model.getName() + "");
         try {
             holder1.description.setText(model.getDescription() + "");
-        }catch (Exception e){
+        } catch (Exception e) {
 
         }
-
-
-
     }
 
     @Override
@@ -66,12 +53,12 @@ public class StudentCompanyAdapter extends RecyclerView.Adapter<RecyclerView.Vie
 
 
     public class Holder extends RecyclerView.ViewHolder {
-        TextView name,description;
+        TextView name, description;
 
         public Holder(View itemView) {
             super(itemView);
             name = (TextView) itemView.findViewById(R.id.name);
-            description= (TextView) itemView.findViewById(R.id.description);
+            description = (TextView) itemView.findViewById(R.id.description);
         }
     }
 }
